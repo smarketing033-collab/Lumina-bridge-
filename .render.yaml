@@ -1,7 +1,11 @@
 services:
   - type: web
-    name: lumina-bridge
+    name: lumina-backend
     env: node
+    region: frankfurt
+    plan: free
     buildCommand: "npm install"
     startCommand: "npm start"
-    plan: free
+    envVars:
+      - key: TWELVE_API_KEY
+        sync: false
