@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: lumina-bridge
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    plan: free
