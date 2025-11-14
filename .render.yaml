@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: lumina-bridge
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: TWELVEDATA_KEY
+        sync: false
+      - key: BRIDGE_SECRET
+        sync: false
+      - key: BASIC_AUTH_USER
+        sync: false
+      - key: BASIC_AUTH_PASS
+        sync: false
+      - key: REDIS_URL
+        sync: false
